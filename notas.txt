@@ -1,0 +1,36 @@
+# Para recrear el proyecto y sus dependecias ejecutar
+$ npm install
+
+-- Para el desarrollador
+npm init
+npm i express
+--Dependencia de desarrollo
+npm i  -D express
+-- el nombre start viene de pakage. json
+npm run start
+npm i -D nodemon
+npm run server
+npm i pug
+--instalar tailwind
+npm i -D tailwindcss autoprefixer postcss postcss-cli
+--solo una vez
+npx tailwindcss init -p
+--compilar tailwind
+npm run css
+--para el orm
+npm i sequelize mysql2
+mysql -u root -p
+echo $C9_USER
+sudo service mysqld status
+
+-- para el env de variables de entorno
+npm i dotenv
+
+npm i express-validator
+npm i bcrypt
+npm i jsonwebtoken
+npm i nodemailer
+npm i bcryptjs
+npm i multer
+npm i csurf
+npm i cookie-parser
