@@ -34,3 +34,10 @@ npm i bcryptjs
 npm i multer
 npm i csurf
 npm i cookie-parser
+
+comandos git add
+git add . //guarda las modificaciones
+git commit -m "" //comentarios
+git push //sube los cambios a la nube
+git status //muestra las modificaciones y nuevos archivos creados
+git init
