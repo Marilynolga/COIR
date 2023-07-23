@@ -1,23 +1,12 @@
 import {DataTypes} from 'sequelize';
 import db from '../config/db.js';
 
-const Proyecto = db.define('proyecto',{
-    idProyecto: {
-        type: DataTypes.UUID,
-        defaultValue: DataTypes.UUIDV4,
-        allowNull: false,
-        primaryKey: true
-    },
+const Proyecto = db.define('proyectos', {
     nombre: {
-        type: DataTypes.STRING(100),
-        allowNull:false
-    },
-    direccion: {
-        type: DataTypes.STRING(100),
-        allowNull:false
+        type: DataTypes.STRING(30),
+        allowNull: false
     }
+});
 
-
-})
 
 export default Proyecto;

@@ -41,3 +41,5 @@ git commit -m "" //comentarios
 git push //sube los cambios a la nube
 git status //muestra las modificaciones y nuevos archivos creados
 git init
+git config --global user.email "u19313777@utp.edu.pe"
+git config --global user.name "Marilyn"

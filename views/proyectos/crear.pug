@@ -8,6 +8,52 @@ block contenido
 
         div(class="bg-white shadow py-8 px-4 rounded mx-auto mx-w-4xl my-10 md:px-10")
             form.space-y-8
+                .space-y-5 
+                    h3.text-lg.leading-6.font-medium.text-gray-900 Información General 
+                    p.text-gray-600 Añade Información sobre el proyecto
 
-            h1 Contenido
-            h1 Contenido
+                        div 
+                            label.block.text-sm.uppercase.text-gray-500.mb-2.font-bold(for="titulo") Titulo de observación
+                            input#titulo.w-full.px-3.py-2.border.border-gray-300.rounded-md.placeholder-gray-400(placeholder="Título Observación" type="text" name="titulo")
+
+                        div 
+                            label.block.text-sm.uppercase.text-gray-500.mb-2.font-bold(for="descripcion") Descripcion
+                            textarea#descripcion.w-full.px-3.py-2.border.border-gray-300.rounded-md.placeholder-gray-400(placeholder="Descripcion de observación encontrada" name="descripcion")
+
+                        div(class="md:flex md:gap-4 space-y-5 md:space-y-0")
+
+                            div(class="md:w-1/2")
+                                label.block.text-sm.uppercase.text-gray-500.mb-3.font-bold(for="proyectos") Proyecto 
+                                select#proyectos.w-full.px-3.py-2.border.border-gray-300.rounded-md.placeholder-gray-400(name="proyectos")
+                                    option(value="") - Seleccione -
+                                    each proyecto in proyectos
+                                        option(value=proyecto.id)= proyecto.nombre
+                            
+                            div(class="md:w-1/2")
+                                label.block.text-sm.uppercase.text-gray-500.mb-3.font-bold(for="dpto") Dpto 
+                                select#dpto.w-full.px-3.py-2.border.border-gray-300.rounded-md.placeholder-gray-400(name="dpto")
+                                    option(value="") - Seleccione -
+                                    each dpto in dptos 
+                                        option(value=dpto.id)= dpto.nombre 
+
+                        div(class="md:flex md:gap-4 space-y-5 md:space-y-0")
+
+                            div(class="md:w-1/2")
+                                label.block.text-sm.uppercase.text-gray-500.mb-3.font-bold(for="servicios") Servicios  
+                                select#servicios.w-full.px-3.py-2.border.border-gray-300.rounded-md.placeholder-gray-400(name="servicios")
+                                    option(value="") - Seleccione -
+                                    each servicio in servicios
+                                        option(value=servicio.id)= servicio.nombre 
+                            
+                            div(class="md:w-1/2")
+                                label.block.text-sm.uppercase.text-gray-500.mb-3.font-bold(for="precio") Precio 
+                                select#precio.w-full.px-3.py-2.border.border-gray-300.rounded-md.placeholder-gray-400(name="precio")
+                                    option(value="") - Seleccione -
+                                    each precio in precios 
+                                        option(value=precio.id)= precio.nombre
+
+block scripts 
+    script(src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js")
+    script(src="https://unpkg.com/esri-leaflet@3.0.8/dist/esri-leaflet.js")
+    script(src="https://unpkg.com/esri-leaflet-geocoder@2.2.13/dist/esri-leaflet-geocoder.js")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-geosearch/2.7.0/bundle.min.js")
